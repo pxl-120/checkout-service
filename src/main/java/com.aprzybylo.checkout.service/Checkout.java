@@ -19,18 +19,6 @@ public class Checkout {
 				: item.getNormalPrice() * quantity));
 		}
 		return result;
-		/*double total = 0;
-		for (String itemName : cart.keySet()) {
-			Item item = itemCatalog.get(itemName);
-			int quantity = cart.get(itemName);
-			if (quantity >= item.getRequiredQuantity()) {
-				total += (quantity / item.getRequiredQuantity()) * item.getSpecialPrice();
-				total += (quantity % item.getRequiredQuantity()) * item.getNormalPrice();
-			} else {
-				total += quantity * item.getNormalPrice();
-			}
-		}
-		return total;*/
 	}
 	public void addItemToCatalog(Item item) {
 		itemCatalog.put(item.getName(), item);
